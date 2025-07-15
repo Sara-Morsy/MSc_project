@@ -1,0 +1,6 @@
+library(survival)  # core survival analysis package
+library(survminer)
+
+s = Surv(pdata$time, pdata$status)
+fit = coxph(Surv(time, status)~genes_from_meta, data=pdata)
+fit
