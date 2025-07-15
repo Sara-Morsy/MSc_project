@@ -1,4 +1,4 @@
-This file contains the following:
+This repository contains the following:
 - Codes for microarray processing
 - Codes for RNAseq processing
 - Workflow
