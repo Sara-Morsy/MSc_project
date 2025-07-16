@@ -19,7 +19,7 @@ GSE6811: YNmicroarray
 
 GSE28680: Illumina HumanHT-12 V4.0 expression beadchip
 
-GSE5803 (dependent and independent): BioStarH-141s
+GSE5803 (dependent and independent): BioStarH-141s  (Excluded_lack_of_raw_data)
 
 ### RNAseq
 
