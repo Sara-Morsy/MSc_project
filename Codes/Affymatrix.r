@@ -28,7 +28,7 @@ sd_ratio <- sqrt(percentVar[2] / percentVar[1])
 dataGG <- data.frame(PC1 = PCA_raw$x[,1], PC2 = PCA_raw$x[,2],
                      Disease = GPL570@phenoData@data[["Dx"]]
 )
-
+#color here is the categories for your dataset (diseased vs healthy), so the shape and colour here are the status variable
 ggplot(dataGG, aes(PC1, PC2)) +
   geom_point(aes(shape = Disease, colour = Disease)) +
   ggtitle("PCA plot of the log-transformed raw expression data") +
@@ -37,10 +37,11 @@ ggplot(dataGG, aes(PC1, PC2)) +
   theme(plot.title = element_text(hjust = 0.5))+
   coord_fixed(ratio = sd_ratio) 
 
+#check if there are any outliers
 oligo::boxplot(GPL570, target = "core", 
                main = "Boxplot of log2-intensitites for the raw data")
 
-#normalization then checking the data again
+#normalization then checking the data again through pca and boxplots to check any outliers
 GPL570_norm <- oligo::rma(GPL570)
 
 exp_GPL570 <- Biobase::exprs(GPL570_norm)
@@ -65,7 +66,7 @@ ggplot(dataGG, aes(PC1, PC2)) +
 oligo::boxplot(GPL570_norm, target = "core", 
                main = "Boxplot of log2-intensitites for the raw data")
 
-#filtering low intensity genes
+#filtering low-intensity genes
 GPL570_f <- rowMedians(Biobase::exprs(GPL570_norm))
 
 hist_res <- hist(GPL570_f, 100, col="#e7efd8", freq = FALSE,
@@ -92,7 +93,7 @@ samples_cutoff <- min(no_of_samples)
 idx_thresh_median <- apply(exprs(GPL570_norm), 1, function(x){
 				   sum(x > thresh_median) >= samples_cutoff})
 table(idx_thresh_median)
-#There is no needed filtration 
+#There is no needed filtration if the results of the last line did not show any outlier
 GPL570_filtered <- subset(GPL570_norm, idx_thresh_median)
 
 #annotation to remove gene with NA volume
