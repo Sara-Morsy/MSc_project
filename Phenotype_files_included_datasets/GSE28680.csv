@@ -1,0 +1,21 @@
+ID,Status,Treatment
+GSM710358,CRPC," HRPC, hormone-refractory prostate cancer"
+GSM710362,CRPC," LHRH, androgen deprivation, monotherapy"
+GSM710363,CRPC," CPA, cyproterone acetate, monotherapy"
+GSM710365,CRPC," HRPC, hormone-refractory prostate cancer"
+GSM710366,CRPC," LHRH, androgen deprivation, monotherapy"
+GSM710367,CRPC," CPA, cyproterone acetate, monotherapy"
+GSM710369,CRPC, untreated
+GSM710370,CRPC," LHRH, androgen deprivation, monotherapy"
+GSM710371,CRPC," HRPC, hormone-refractory prostate cancer"
+GSM710373,CRPC," CPA, cyproterone acetate, monotherapy"
+GSM710375,CRPC," LHRH, androgen deprivation, monotherapy"
+GSM710376,CRPC," HRPC, hormone-refractory prostate cancer"
+GSM710378,CRPC, untreated
+GSM710356,hormone_sensitive_PCA, untreated
+GSM710357,hormone_sensitive_PCA," LHRH, androgen deprivation, monotherapy"
+GSM710360,hormone_sensitive_PCA," LHRH, androgen deprivation, monotherapy"
+GSM710361,hormone_sensitive_PCA, untreated
+GSM710364,hormone_sensitive_PCA," LHRH, androgen deprivation, monotherapy"
+GSM710372,hormone_sensitive_PCA," LHRH, androgen deprivation, monotherapy"
+GSM710377,hormone_sensitive_PCA," LHRH, androgen deprivation, monotherapy"

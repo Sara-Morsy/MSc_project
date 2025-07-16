@@ -1,0 +1,7 @@
+Status,ID,Gleason,Sampling
+CRPC,GSM816965, 4+3,random biopsy
+CRPC,GSM816966, 2+2,random biopsy
+CRPC,GSM816967, 3+3,random biopsy
+hormone_sensitive_PCA,GSM816968, 3+3,microdissected histologically confirmed
+hormone_sensitive_PCA,GSM816969, 3+3,microdissected histologically confirmed
+hormone_sensitive_PCA,GSM816970, 3+3,microdissected histologically confirmed
