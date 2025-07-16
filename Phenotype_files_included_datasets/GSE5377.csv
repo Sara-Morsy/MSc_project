@@ -1,0 +1,17 @@
+ID,Status,Tumor_content,Age,Treatment
+GSM119302,hormone_sensitive_PCA,90 percent tumor content,70,radical prostatectomy
+GSM119303,hormone_sensitive_PCA,70 percent tumor content,66,radical prostatectomy
+GSM119304,hormone_sensitive_PCA,70 percent tumor content,69,radical prostatectomy
+GSM119305,hormone_sensitive_PCA,90 percent tumor content,68,radical prostatectomy
+GSM119306,hormone_sensitive_PCA,90 percent tumor content,68,radical prostatectomy
+GSM119307,hormone_sensitive_PCA,80 percent tumor content,52,radical prostatectomy
+GSM119312,hormone_sensitive_PCA,90 percent tumor content,65,transurethral resection (TUR)
+GSM119313,hormone_sensitive_PCA,90 percent tumor content,74,transurethral resection (TUR)
+GSM119314,hormone_sensitive_PCA,90 percent tumor content,89,transurethral resection (TUR)
+GSM119315,CRPC,82 percent tumor content,80,transurethral resection (TUR)
+GSM119316,CRPC,90 percent tumor content,63,transurethral resection (TUR)
+GSM119317,CRPC,90 percent tumor content,83,transurethral resection (TUR)
+GSM119318,CRPC,90 percent tumor content,68,transurethral resection (TUR)
+GSM119319,CRPC,90 percent tumor content,57,transurethral resection (TUR)
+GSM119320,CRPC,80 percent tumor content,56,transurethral resection (TUR)
+GSM119321,CRPC,90 percent tumor content,67,transurethral resection (TUR)

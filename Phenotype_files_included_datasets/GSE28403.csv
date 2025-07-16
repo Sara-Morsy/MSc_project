@@ -1,0 +1,14 @@
+ID,Description,Status,Treatment,Tissue
+GSM701952,"prostate cancer_recurrence, castration-resistant",CRPC," Suprefact + Androcur, orchiectomy, flutamide",Prostate
+GSM701953,"prostate cancer_recurrence, castration-resistant",CRPC," Orchiectomy, Androcur",Prostate
+GSM701954,"prostate cancer_recurrence, castration-resistant",CRPC, Orchiectomy,Prostate
+GSM701955,"prostate cancer_recurrence, castration-resistant",CRPC, Orchiectomy,Prostate
+GSM701956,"prostate cancer_recurrence, castration-resistant",CRPC," Casodex, Avodart",Prostate
+GSM701957,"prostate cancer_recurrence, castration-resistant",CRPC," Casodex, Suprefact",Prostate
+GSM701958,"prostate cancer_recurrence, castration-resistant",CRPC, Orchiectomy,Prostate
+GSM701959,prostate cancer_lung metastasis,hormone_sensitive_PCA, None,Lung
+GSM701960,"prostate cancer_lymph node metastasis, castration-resistant",CRPC, Zoladex + flutamide,Lymph_node
+GSM701961,prostate cancer_lymph node metastasis,hormone_sensitive_PCA, None,Lymph_node
+GSM701962,prostate cancer_lymph node metastasis,hormone_sensitive_PCA, None,Lymph_node
+GSM701963,prostate cancer_lymph node metastasis,hormone_sensitive_PCA, None,Lymph_node
+GSM701964,"prostate cancer_lymph node metastasis, castration-resistant",CRPC," Orchiectomy, Casodex",Lymph_node
