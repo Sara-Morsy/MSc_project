@@ -1,9 +1,7 @@
 ### Microarray: (phenotype is in the repos)
-GSE3325: microarray
+GSE3325: Affymetrix
 
-GSE2443: microarray
-
-GSE262940: RNAseq
+GSE2443: Affymetrix
 
 GSE104786: Affymetrix Human Exon 1.0 ST Array [transcript (gene) version]
 
@@ -29,3 +27,4 @@ GSE111177 (good one, high impact and low impact post ADT): RNAseq
 GSE80609 (RNAseq, only CaP and CPRC)
 
 GSE67980: RNAseq
+GSE262940: RNAseq
