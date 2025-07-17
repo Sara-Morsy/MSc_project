@@ -29,7 +29,7 @@ for FASTQ in "$INPUT_DIR"/*_no_contam.fastq; do
     OUT_DIR="$OUTPUT_BASE/$SAMPLE"
     mkdir -p "$OUT_DIR"
 
-    echo "🔄 Running STAR for sample: $SAMPLE"
+    echo "Running STAR for sample: $SAMPLE"
 
     # Run STAR_You can add arguments here
     STAR \

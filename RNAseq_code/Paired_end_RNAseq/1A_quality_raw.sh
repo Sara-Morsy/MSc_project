@@ -22,7 +22,7 @@ run_fastqc_pair() {
         return
     fi
 
-    echo "📊 Running FastQC on $SAMPLE"
+    echo "Running FastQC on $SAMPLE"
 
     fastqc "$R1" "$R2" \
         --outdir "$OUT_DIR" \
