@@ -16,7 +16,7 @@ run_fastqc_dedup_se() {
     R1="$1"
     SAMPLE=$(basename "$R1" _clean.fastq)
 
-    echo "📊 Running FastQC on $SAMPLE"
+    echo "Running FastQC on $SAMPLE"
     fastqc "$R1" \
         --outdir "$OUT_DIR" \
         --threads "$THREADS_PER_JOB"
@@ -30,4 +30,4 @@ find "$IN_DIR" -maxdepth 1 -name "*_clean.fastq" -print0 \
   | sort -z \
   | parallel -0 -j "$MAX_JOBS" run_fastqc_dedup_se {}
 
-echo "✅ FastQC complete. Reports saved in '$OUT_DIR'"
+echo "FastQC complete. Reports saved in '$OUT_DIR'"
