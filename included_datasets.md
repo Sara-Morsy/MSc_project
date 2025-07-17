@@ -15,6 +15,8 @@ GSE28403 (CRPC vs LN pca): batch correction based on the tissue: Affymetrix Huma
 
 GSE5377: affymatrix
 
+## Excluded
+
 GSE6811: YNmicroarray (excluded due to customisation)
 
 GSE28680: Illumina HumanHT-12 V4.0 expression beadchip (excluded due to missing raw data)
