@@ -19,5 +19,5 @@ for FILE in "$FASTQC_DIR"/*_fastqc.html; do
     }' >> "$OUTPUT_FASTA"
 done
 
-echo "✅ Extracted FASTA saved to: $OUTPUT_FASTA"
+echo "Extracted FASTA saved to: $OUTPUT_FASTA"
 
