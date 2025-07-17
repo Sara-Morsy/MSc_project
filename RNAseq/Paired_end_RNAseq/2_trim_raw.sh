@@ -18,13 +18,13 @@ run_fastp_clean() {
     R2="${IN_DIR}/${SAMPLE}_2.fastq"
 
     if [[ ! -f "$R2" ]]; then
-        echo "⚠️  Missing pair for $SAMPLE — skipping"
+        echo "Missing pair for $SAMPLE — skipping"
         return
     fi
 
-    echo "🚀 Processing $SAMPLE"
+    echo "Processing $SAMPLE"
 
-    fastp \
+    fastp \ #it has all the arguments, adjust based on what you want
         -i "$R1" -I "$R2" \
         -o "$OUT_DIR/${SAMPLE}_1_clean.fastq" \
         -O "$OUT_DIR/${SAMPLE}_2_clean.fastq" \
@@ -48,5 +48,5 @@ export IN_DIR OUT_DIR THREADS_PER_JOB
 find "$IN_DIR" -maxdepth 1 -name "*_1.fastq" -print0 \
   | sort -z | parallel -0 -j "$MAX_JOBS" run_fastp_clean {}
 
-echo "✅ All FASTQ files processed and saved in '$OUT_DIR'"
+echo "All FASTQ files processed and saved in '$OUT_DIR'"
 
