@@ -17,7 +17,7 @@ run_fastp_single() {
     SAMPLE=$(basename "$FILE" .fastq)
 
     echo "Processing $SAMPLE"
-
+#you can add arguments for trimming here
     fastp \
         -i "$FILE" \
         -o "$OUT_DIR/${SAMPLE}_clean.fastq" \
