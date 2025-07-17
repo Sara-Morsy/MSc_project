@@ -16,7 +16,7 @@ run_fastp_single() {
     FILE="$1"
     SAMPLE=$(basename "$FILE" .fastq)
 
-    echo "🚀 Processing $SAMPLE"
+    echo "Processing $SAMPLE"
 
     fastp \
         -i "$FILE" \
@@ -35,5 +35,5 @@ export IN_DIR OUT_DIR THREADS_PER_JOB
 find "$IN_DIR" -maxdepth 1 -name "*.fastq" -print0 \
   | sort -z | parallel -0 -j "$MAX_JOBS" run_fastp_single {}
 
-echo "✅ All single-end FASTQ files processed and saved in '$OUT_DIR'"
+echo "All single-end FASTQ files processed and saved in '$OUT_DIR'"
 
