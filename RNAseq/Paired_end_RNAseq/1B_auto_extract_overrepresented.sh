@@ -5,7 +5,7 @@ OUTPUT_FASTA="contaminants_from_html.fasta"
 
 > "$OUTPUT_FASTA"
 
-echo "🔍 Extracting overrepresented sequences from FastQC HTML files..."
+echo "Extracting overrepresented sequences from FastQC HTML files..."
 
 for FILE in "$FASTQC_DIR"/*_fastqc.html; do
     SAMPLE=$(basename "$FILE" _fastqc.html)
@@ -19,5 +19,5 @@ for FILE in "$FASTQC_DIR"/*_fastqc.html; do
     }' >> "$OUTPUT_FASTA"
 done
 
-echo "✅ Extracted FASTA saved to: $OUTPUT_FASTA"
+echo "Extracted FASTA saved to: $OUTPUT_FASTA"
 
