@@ -8,7 +8,7 @@ TOTAL_CORES=$(nproc)
 MAX_JOBS=$(( TOTAL_CORES / THREADS_PER_JOB ))
 IN_DIR="./cleaned_reads"
 OUT_DIR="cleaned_dedup_bbduk2"
-REF_FASTA="output.fasta"
+REF_FASTA="output.fasta" #reference_file_with_common_contaminants, It will save you from doing blast
 
 mkdir -p "$OUT_DIR"
 
@@ -17,7 +17,7 @@ process_sample_se() {
     R1="$1"
     SAMPLE=$(basename "$R1" _clean.fastq)
 
-    echo "🚀 Processing $SAMPLE"
+    echo "Processing $SAMPLE"
 
     # Step 1: Deduplicate with clumpify (single-end)
     clumpify.sh \
@@ -33,7 +33,7 @@ process_sample_se() {
         k=31 hdist=1 threads="$THREADS_PER_JOB" \
         stats="${OUT_DIR}/${SAMPLE}_bbduk_stats.txt"
 
-    echo "✅ Finished $SAMPLE"
+    echo "Finished $SAMPLE"
 }
 
 export -f process_sample_se
@@ -44,5 +44,5 @@ find "$IN_DIR" -maxdepth 1 -name "*_clean.fastq" -print0 \
   | sort -z \
   | parallel -0 -j "$MAX_JOBS" process_sample_se {}
 
-echo "🎉 All samples processed. Output in '$OUT_DIR'"
+echo "All samples processed. Output in '$OUT_DIR'"
 
