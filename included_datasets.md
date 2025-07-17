@@ -23,8 +23,6 @@ GSE5803 (dependent and independent): BioStarH-141s  (Excluded_lack_of_raw_data)
 
 ### RNAseq
 
-GSE111177 (good one, high impact and low impact post ADT): RNAseq
-
 GSE80609 (RNAseq, only CaP and CPRC)
 
 GSE67980: RNAseq
