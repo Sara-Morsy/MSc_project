@@ -31,7 +31,7 @@ for FASTQ in "$INPUT_DIR"/*_no_contam.fastq; do
 
     echo "🔄 Running STAR for sample: $SAMPLE"
 
-    # Run STAR
+    # Run STAR_You can add arguments here
     STAR \
       --runThreadN "$THREADS" \
       --genomeDir "$GENOME_DIR" \
@@ -40,5 +40,5 @@ for FASTQ in "$INPUT_DIR"/*_no_contam.fastq; do
       --outSAMtype BAM SortedByCoordinate \
       --limitBAMsortRAM 2000000000
 
-    echo "✅ Finished STAR for $SAMPLE"
+    echo "Finished STAR for $SAMPLE"
 done
