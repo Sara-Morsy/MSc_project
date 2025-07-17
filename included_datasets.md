@@ -23,7 +23,8 @@ GSE5803 (dependent and independent): BioStarH-141s  (Excluded_lack_of_raw_data)
 
 ### RNAseq
 
-GSE80609 (RNAseq, only CaP and CPRC)
+GSE80609 (RNAseq, only CaP and CPRC): paired_end
 
-GSE67980: RNAseq
+GSE197609: Paired_end
+GSE67980: RNAseq: single_end
 
