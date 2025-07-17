@@ -18,11 +18,11 @@ run_fastqc_cleaned() {
     R2="${IN_DIR}/${SAMPLE}_2_clean.fastq.gz"
 
     if [[ ! -f "$R2" ]]; then
-        echo "⚠️  Missing R2 for $SAMPLE — skipping"
+        echo "Missing R2 for $SAMPLE — skipping"
         return
     fi
 
-    echo "📊 Running FastQC on $SAMPLE"
+    echo "Running FastQC on $SAMPLE"
 
     fastqc "$R1" "$R2" \
         --outdir "$OUT_DIR" \
@@ -36,5 +36,5 @@ export IN_DIR OUT_DIR THREADS_PER_JOB
 find "$IN_DIR" -maxdepth 1 -name "*_1_clean.fastq.gz" -print0 \
     | sort -z | parallel -0 -j "$MAX_JOBS" run_fastqc_cleaned {}
 
-echo "✅ FastQC complete. Reports saved in '$OUT_DIR'"
+echo "FastQC complete. Reports saved in '$OUT_DIR'"
 
