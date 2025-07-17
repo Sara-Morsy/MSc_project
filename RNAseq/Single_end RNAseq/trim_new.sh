@@ -16,7 +16,7 @@ run_fastp_clean_se() {
     R1="$1"
     SAMPLE=$(basename "$R1" .fastq)
 
-    echo "🚀 Processing $SAMPLE"
+    echo "Processing $SAMPLE"
 
     fastp \
         -i "$R1" \
@@ -37,5 +37,5 @@ find "$IN_DIR" -maxdepth 1 -name "*.fastq" -print0 \
   | sort -z \
   | parallel -0 -j "$MAX_JOBS" run_fastp_clean_se {}
 
-echo "✅ All single-end FASTQ files processed and saved in '$OUT_DIR'"
+echo "All single-end FASTQ files processed and saved in '$OUT_DIR'"
 
