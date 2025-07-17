@@ -7,8 +7,8 @@ THREADS_PER_JOB=8
 TOTAL_CORES=$(nproc)
 MAX_JOBS=$((TOTAL_CORES / THREADS_PER_JOB))
 IN_DIR="./cleaned_reads"
-OUT_DIR="cleaned_dedup_bbduk2"
-REF_FASTA="filtered.fasta"
+OUT_DIR="cleaned_dedup_bbduk"
+REF_FASTA="output.fasta"
 
 mkdir -p "$OUT_DIR"
 
@@ -19,11 +19,11 @@ process_sample() {
     R2="${IN_DIR}/${SAMPLE}_2_clean.fastq.gz"
 
     if [[ ! -f "$R2" ]]; then
-        echo "⚠️  Missing pair for $SAMPLE — skipping"
+        echo "Missing pair for $SAMPLE — skipping"
         return
     fi
 
-    echo "🚀 Processing $SAMPLE"
+    echo "Processing $SAMPLE"
 
     # Step 1: Deduplicate with clumpify
     clumpify.sh \
@@ -42,7 +42,7 @@ process_sample() {
         k=31 hdist=1 threads="$THREADS_PER_JOB" \
         stats="${OUT_DIR}/${SAMPLE}_bbduk_stats.txt"
 
-    echo "✅ Finished $SAMPLE"
+    echo "Finished $SAMPLE"
 }
 
 export -f process_sample
@@ -52,4 +52,4 @@ export IN_DIR OUT_DIR THREADS_PER_JOB REF_FASTA
 find "$IN_DIR" -maxdepth 1 -name "*_1_clean.fastq.gz" -print0 \
   | sort -z | parallel -0 -j "$MAX_JOBS" process_sample {}
 
-echo "🎉 All samples processed. Output in '$OUT_DIR'"
+echo "All samples processed. Output in '$OUT_DIR'"
