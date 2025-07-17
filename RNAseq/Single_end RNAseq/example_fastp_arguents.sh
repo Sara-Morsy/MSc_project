@@ -52,5 +52,5 @@ for INFASTQ in "${INDIR}"/*clean_dedup.trimmed.fastq; do
 
 done
 
-echo "✅ Batch rescue trimming complete! Trimmed files are in '${OUTDIR}/'"
+echo "Batch rescue trimming complete! Trimmed files are in '${OUTDIR}/'"
 
