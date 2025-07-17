@@ -13,7 +13,7 @@ mkdir -p "$OUT_DIR"
 # FastQC function for single-end .fastq reads
 run_fastqc_single() {
     fq="$1"
-    sample=$(basename "$fq" .fastq)
+    sample=$(basename "$fq" .fastq.gz)
     echo "Running FastQC on $sample"
     fastqc "$fq" \
         --outdir "$OUT_DIR" \
@@ -24,7 +24,7 @@ export -f run_fastqc_single
 export IN_DIR OUT_DIR THREADS_PER_JOB
 
 # Find all .fastq files and process in parallel
-find "$IN_DIR" -maxdepth 1 -name "*.fastq" -print0 \
+find "$IN_DIR" -maxdepth 1 -name "*.fastq.gz" -print0 \
     | sort -z \
     | parallel -0 -j "$MAX_JOBS" run_fastqc_single {}
 
