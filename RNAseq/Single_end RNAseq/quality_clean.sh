@@ -16,7 +16,7 @@ run_fastqc_single_cleaned() {
     FILE="$1"
     SAMPLE=$(basename "$FILE" _clean.fastq)
 
-    echo "📊 Running FastQC on $SAMPLE"
+    echo "Running FastQC on $SAMPLE"
 
     fastqc "$FILE" \
         --outdir "$OUT_DIR" \
@@ -30,4 +30,4 @@ export IN_DIR OUT_DIR THREADS_PER_JOB
 find "$IN_DIR" -maxdepth 1 -name "*_clean.fastq" -print0 \
     | sort -z | parallel -0 -j "$MAX_JOBS" run_fastqc_single_cleaned {}
 
-echo "✅ FastQC complete. Reports saved in '$OUT_DIR'"
+echo "FastQC complete. Reports saved in '$OUT_DIR'"
