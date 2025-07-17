@@ -14,7 +14,7 @@ for READ1 in "$INPUT_DIR"/*_1_clean.fastq.gz; do
 
   # Confirm both reads exist
   if [[ ! -f "$READ2" ]]; then
-    echo "⚠️  Skipping $SAMPLE: $READ2 not found."
+    echo "Skipping $SAMPLE: $READ2 not found."
     continue
   fi
 
@@ -22,7 +22,7 @@ for READ1 in "$INPUT_DIR"/*_1_clean.fastq.gz; do
   OUTDIR="${OUTDIR_BASE}/${SAMPLE}"
   mkdir -p "$OUTDIR"
 
-  echo "🔄 Processing sample: $SAMPLE"
+  echo "Processing sample: $SAMPLE"
 
   # Run STAR
   STAR \
@@ -35,11 +35,11 @@ for READ1 in "$INPUT_DIR"/*_1_clean.fastq.gz; do
     --quantMode TranscriptomeSAM \
     --limitBAMsortRAM 28000000000
 
-  echo "✅ STAR alignment complete for $SAMPLE"
-  echo "📂 Output BAM: ${OUTDIR}/${SAMPLE}_Aligned.sortedByCoord.out.bam"
-  echo "📂 Transcriptome BAM: ${OUTDIR}/${SAMPLE}_Aligned.toTranscriptome.out.bam"
+  echo "STAR alignment complete for $SAMPLE"
+  echo "Output BAM: ${OUTDIR}/${SAMPLE}_Aligned.sortedByCoord.out.bam"
+  echo "Transcriptome BAM: ${OUTDIR}/${SAMPLE}_Aligned.toTranscriptome.out.bam"
   echo "---------------------------------------------"
 done
 
-echo "🎉 All samples processed."
+echo "All samples processed."
 
