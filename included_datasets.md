@@ -15,6 +15,14 @@ GSE28403 (CRPC vs LN pca): batch correction based on the tissue: Affymetrix Huma
 
 GSE5377: affymatrix
 
+### RNAseq
+
+GSE80609 (RNAseq, only CaP and CPRC): paired_end
+
+GSE197609: Paired_end
+
+GSE67980: RNAseq: single_end
+
 ## Excluded
 
 GSE6811: YNmicroarray (excluded due to customisation)
@@ -23,10 +31,5 @@ GSE28680: Illumina HumanHT-12 V4.0 expression beadchip (excluded due to missing 
 
 GSE5803 (dependent and independent): BioStarH-141s  (Excluded_lack_of_raw_data)
 
-### RNAseq
 
-GSE80609 (RNAseq, only CaP and CPRC): paired_end
-
-GSE197609: Paired_end
-GSE67980: RNAseq: single_end
 
