@@ -17,7 +17,7 @@ GSE5377: affymatrix
 
 GSE6811: YNmicroarray (excluded due to customisation)
 
-GSE28680: Illumina HumanHT-12 V4.0 expression beadchip
+GSE28680: Illumina HumanHT-12 V4.0 expression beadchip (excluded due to missing raw data)
 
 GSE5803 (dependent and independent): BioStarH-141s  (Excluded_lack_of_raw_data)
 
