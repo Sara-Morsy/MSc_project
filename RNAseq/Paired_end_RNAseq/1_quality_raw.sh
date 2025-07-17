@@ -18,7 +18,7 @@ run_fastqc_pair() {
     R2="${IN_DIR}/${SAMPLE}_2.fastq.gz"
 
     if [[ ! -f "$R2" ]]; then
-        echo "⚠️  Missing R2 for $SAMPLE — skipping"
+        echo "Missing R2 for $SAMPLE — skipping"
         return
     fi
 
@@ -36,4 +36,4 @@ export IN_DIR OUT_DIR THREADS_PER_JOB
 find "$IN_DIR" -maxdepth 1 -name "*_1.fastq.gz" -print0 \
     | sort -z | parallel -0 -j "$MAX_JOBS" run_fastqc_pair {}
 
-echo "✅ FastQC complete. HTML reports saved in '$OUT_DIR'"
+echo "FastQC complete. HTML reports saved in '$OUT_DIR'"
