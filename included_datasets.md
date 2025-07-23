@@ -13,7 +13,7 @@ GSE37199: Affymetrix Human Genome U133 Plus 2.0 Array
 
 GSE28403 (CRPC vs LN pca): batch correction based on the tissue: Affymetrix Human Genome U133 Plus 2.0 Array
 
-GSE5377: affymatrix
+GSE5377: affymatrix hg focus array (hgfocus.db)
 
 ### RNAseq
 
