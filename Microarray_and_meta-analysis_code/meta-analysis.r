@@ -9,9 +9,6 @@ library(MetaIntegrator)
 caseGSE6955 <- read_csv("GSE6955/caseGSE6955.csv")
 ID1<-list()
 ID1$formattedName<-'RTT'
-GSE6955batch<-GSE6955@protocolData@data[["dates"]]
-GSE6955batch<-caseGSE6955$batch
-GSE6955_filteredb<-ComBat(dat=exprs(GSE6955_final),batch=GSE6955batch,mod = caseGSE6955$control.0.col)
 ID1$class<-setNames(caseGSE6955$state,colnames(GSE6955_filteredb))
 
 ID1$expr<-GSE6955_filteredb
