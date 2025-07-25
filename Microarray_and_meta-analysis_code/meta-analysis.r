@@ -1,3 +1,5 @@
+#https://r-mirror.zim.uni-due.de/web/packages/MetaIntegrator/vignettes/MetaIntegrator.html
+
 install.packages("https://cran.r-project.org/src/contrib/Archive/COCONUT/COCONUT_1.0.2.tar.gz",repos = NULL, type = "source")
 install.packages("https://cran.r-project.org/src/contrib/Archive/manhattanly/manhattanly_0.2.0.tar.gz", repos = NULL, type = "source")
 install.packages("https://cran.r-project.org/src/contrib/Archive/MetaIntegrator/MetaIntegrator_2.1.3.tar.gz", repos = NULL, type = "source")
