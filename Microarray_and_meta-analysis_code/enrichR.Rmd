@@ -1,0 +1,17 @@
+# database, https://maayanlab.cloud/Enrichr/
+# example of converting from gene symbol to entrez
+geneset$entrezID<-mapIds(org.Hs.eg.db,
+              keys = yourgeneset,
+              column = "ENTREZID",
+              keytype = "SYMBOL",
+              multiVals = "first")
+# enrichment
+              
+library(enrichR)
+ websiteLive <- TRUE
+  dbs <- c("DisGeNET")
+  if (websiteLive) {
+    enriched <- enrichr(ly$modGenes, dbs)
+  }
+  enriched$DisGeNET
+  if (websiteLive) plotEnrich(enriched[[1]], showTerms = 20, numChar = 40, y = "Count", orderBy = "P.value")
