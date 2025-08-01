@@ -1,0 +1,12 @@
+ID,GSM3024820,GSM3024822,GSM3024824,GSM3024826,GSM3024828,GSM3024830,GSM3024832,GSM3024834,GSM3024836,GSM3024838,GSM3024840,GSM3024842,GSM3024844,GSM3024846,GSM3024848,GSM3024850,GSM3024852,GSM3024854,GSM3024856,GSM3024858,GSM3024860,GSM3024863
+Sample,Radical Prostatectomy,Radical Prostatectomy,Radical Prostatectomy,Radical Prostatectomy,Radical Prostatectomy,Radical Prostatectomy,Radical Prostatectomy,Radical Prostatectomy,Radical Prostatectomy,Radical Prostatectomy,Radical Prostatectomy,Radical Prostatectomy,Radical Prostatectomy,Radical Prostatectomy,Radical Prostatectomy,Radical Prostatectomy,Radical Prostatectomy,Radical Prostatectomy,Radical Prostatectomy,Radical Prostatectomy,TURP,TURP
+Age,68,59,67,48,56,66,66,68,57,57,66,67,69,59,60,60,63,63,63,63,74,82
+Race,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white,white
+PSA,23,21,15.61,29.13,5.51,5.4,5,10.89,21,5.2,8.26,20,7.61,9.97,8.1,6.1,12.9,56.73,21.54,12,10.71,160
+Primary_Gleason,3,2,3,3,3,3,3,3,3,3,3,2,2,3,3,3,3,4,3,5,3,NA
+Secondary_Gleason,4,3,3,4,4,3,5,4,3,5,2,2,2,3,3,4,4,3,4,5,4,NA
+neoadjuvant_ADT_months,5,2,2,3,3,6,3,3,8,8,8,3,8,3,8,3,2,7,6,1,1,1
+Recurrence,Yes,Yes,No,Yes,Yes,No,No,No,Yes,No,Yes,No,No,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes
+Metastasis,Yes,No,No,No,Yes,No,No,No,Yes,No,Yes,No,No,No,No,No,No,Yes,No,No,Yes,Yes
+Time,5,2,2,3,3,6,3,3,8,8,8,3,8,3,8,3,2,7,6,1,1,1
+Status,1,1,0,1,1,0,0,0,1,0,1,0,0,1,1,0,1,1,0,0,1,1
