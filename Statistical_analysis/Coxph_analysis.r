@@ -2,15 +2,16 @@
 # ggforest: https://rpkgs.datanovia.com/survminer/reference/ggforest.html 
 #dataset preparation
 #in GSE111177.txt, create a new count matrix containing only the significant genes from the meta-analysis using this code
-counts_matrix <- read.delim("GSE111177_norm.tsv", comment.char="#", stringsAsFactors=FALSE)
+#I have already cleaned the sample names, so you only need to convert entrez ID to Gene symbols, then create a new count matrix of meta-analysis genes only from GSE111177_norm.csv
+counts_matrix <- read_csv("GSE111177_norm.csv")
 meta-analysis_genes<-rbind(up,down)
+#convert the entrez to genesymbol and make genesymbol as rownames
+# this is for you to do on your own :) :D
+
+#then do these to create a new count matrix of meta-analysis genes only from GSE111177_norm.csv
 subset_matrix <- count_matrix[rownames(count_matrix) %in% meta-analysis_genes, ]
 subset_matrix$Time<-Data$Time
 subset_matrix$Status<-Data$Status
-
-
-
-
 
 
 library(survival)  # core survival analysis package
@@ -49,3 +50,4 @@ ggforest(
   noDigits = 2
 
 )
+
