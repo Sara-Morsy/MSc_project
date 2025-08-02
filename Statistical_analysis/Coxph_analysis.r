@@ -4,7 +4,8 @@
 #in GSE111177.txt, create a new count matrix containing only the significant genes from the meta-analysis using this code
 #I have already cleaned the sample names, so you only need to convert entrez ID to Gene symbols, then create a new count matrix of meta-analysis genes only from GSE111177_norm.csv
 library(readr)
-counts_matrix <- read_csv("GSE111177_norm.csv")
+Data<-read_csv("Data.csv")
+count_matrix <- read_csv("GSE111177_norm.csv")
 meta-analysis_genes<-rbind(up,down)
 #convert the entrez to genesymbol and make genesymbol as rownames
 # this is for you to do on your own :) :D
@@ -85,3 +86,4 @@ tbl_regression(exponentiate = TRUE) %>%
                  subtitle = " Dataset: Trial {gtsummary}")
 
 model1_tbl
+
